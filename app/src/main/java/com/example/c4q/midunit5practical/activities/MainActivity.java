@@ -1,10 +1,12 @@
-package com.example.c4q.midunit5practical;
+package com.example.c4q.midunit5practical.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.c4q.midunit5practical.R;
 import com.example.c4q.midunit5practical.controller.UserAdapter;
 import com.example.c4q.midunit5practical.model.Results;
 import com.example.c4q.midunit5practical.model.User;
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
         userRV.setLayoutManager(gridLayoutManager);
         connectApi();
-        
+
     }
 
     public void connectApi(){
@@ -64,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void secondActivityIntent(){
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+        startActivity(intent);
     }
 
 
