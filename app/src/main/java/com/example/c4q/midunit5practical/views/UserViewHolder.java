@@ -29,7 +29,7 @@ public class UserViewHolder extends RecyclerView.ViewHolder {
         lastName = itemView.findViewById(R.id.last_name);
     }
 
-    public void onBind(Results users) {
+    public void onBind(final Results users) {
         Picasso.with(itemView.getContext())
                 .load((users.getPicture().getThumbnail()))
                 .into(userPicture);
